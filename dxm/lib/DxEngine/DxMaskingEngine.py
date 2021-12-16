@@ -278,7 +278,7 @@ class DxMaskingEngine(object):
         Return timeout for query
         Tuple (connect_timeout, read_timeout)
         """
-        return (5, 15)
+        return (120, 300)
 
     @classmethod
     def getlogs(self, outputlog,page_size,level):

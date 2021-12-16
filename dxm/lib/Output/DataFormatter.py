@@ -126,14 +126,14 @@ class DataFormatter(object):
                 #data_output += self.data_format.format(*self.header_sep) + "\r\n"
                 if not self.inventory:
                     data_out += '#'
-                data_out += self.data_format.format(*self.results['headers']) + "\r\n"
+                data_out += self.data_format.format(*self.results['headers']) + "\n"
                 #data_out += self.data_format.format(*self.header_sep) + "\r\n"
 
             for row, dt in enumerate(data_results):
                 #data_out += self.data_format.format(*data_results[row]) + "\r\n"
                 # conver all to utf-8
                 data = tuple(map(self.f, data_results[row]))
-                data_out += self.data_format.format(*data) + "\r\n"
+                data_out += self.data_format.format(*data) + "\n"
 
         elif format_type == "json":
             # json_results['header'].append(self.results['header_length'].keys())
